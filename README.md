@@ -1,6 +1,6 @@
-# eleventy-tailwindcss-alpinejs-starter by [Greg Wolanski](https://gregwolanski.com)
+# An 11ty/Eleventy starter template, using TailwindCSS, Netlify and Alpinejs.
 
-A starter repository showing how to build a website with the [Eleventy](https://www.11ty.dev), [Tailwind CSS](https://tailwindcss.com), and [Alpine.js](https://alpinejs.dev).
+A starter repository for building a website with the [Eleventy](https://www.11ty.dev), [Tailwind CSS](https://tailwindcss.com), and [Alpine.js](https://alpinejs.dev).
 
 Learn more on CSS-Tricks: [An Eleventy Starter with Tailwind CSS and Alpine.js](https://css-tricks.com/eleventy-starter-with-tailwind-css-alpine-js/)
 
@@ -9,7 +9,7 @@ Learn more on CSS-Tricks: [An Eleventy Starter with Tailwind CSS and Alpine.js](
 ### 1. Clone this repository
 
 ```
-git clone https://github.com/gregwolanski/eleventy-tailwindcss-alpinejs-starter.git my-website-name
+git clone https://github.com/Ikass/11ty-starter.git my-website-name
 ```
 
 ### 2. Navigate to the directory
@@ -36,17 +36,13 @@ npm run start
 
 [Original template](https://github.com/gregwolanski/eleventy-tailwindcss-alpinejs-starter)
 
-## Troubleshooting
-
-[Windows](https://github.com/gregwolanski/eleventy-tailwindcss-alpinejs-starter/issues/3)
-
 ## License
 
 MIT
 
 See `LICENSE` for more information.
 
-To-Do:
+## To-Do:
 
 - [ ] add eleventy image plugin
 - [ ] eleventy navigation plugin
