@@ -1,5 +1,5 @@
 module.exports = {
-  content: ['_site/**/*.html'],
+  content: ['./src/**/*.{js,md,njk,svg}'],
   safelist: [],
   theme: {
     extend: {
@@ -8,5 +8,8 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+  ],
 }
