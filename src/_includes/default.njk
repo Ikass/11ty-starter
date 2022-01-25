@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>
-      {% block title %}Does it work?{% endblock %}
-    </title>
+    <title>{{ title or metadata.title }}</title>
     <meta charset="UTF-8"/>
     {% if description %}
-      <meta name="description" content="{{description}}"/>
+      <meta name="description" content="{{ description or metadata.description }}"/>
     {% endif %}
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
@@ -14,9 +12,19 @@
     {% block head %}{% endblock %}
     <script defer src="/js/alpine.js?v={% version %}"></script>
   </head>
-  <body>
+
+  <body class="flex flex-col min-h-screen">
+  {# header include #}
+  {% include 'partials/header.njk' %}
+
+  <main class="flex-1">
     {% block content %}
       {{ content | safe }}
     {% endblock %}
+  </main>
+
+  {# footer include #}
+  {% include 'partials/footer.njk' %}
   </body>
+
 </html>

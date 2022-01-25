@@ -1,12 +1,12 @@
-const htmlmin = require('html-minifier')
-
+const htmlmin = require('html-minifier');
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const now = String(Date.now())
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addWatchTarget('./styles/tailwind.config.js')
-  eleventyConfig.addWatchTarget('./styles/tailwind.css')
-
-  eleventyConfig.addPassthroughCopy({
+  eleventyConfig.addWatchTarget('./styles/tailwind.config.js');
+  eleventyConfig.addWatchTarget('./styles/tailwind.css');
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+    eleventyConfig.addPassthroughCopy({
     './node_modules/alpinejs/dist/cdn.js': './js/alpine.js',
   })
 
@@ -14,6 +14,7 @@ module.exports = function (eleventyConfig) {
     return now
   })
 
+  //  Minify HTML output
   eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
     if (
       process.env.ELEVENTY_PRODUCTION &&
@@ -30,9 +31,10 @@ module.exports = function (eleventyConfig) {
 
     return content
   })
+
   return {
     dir: {
-      // ⚠️ These values are both relative to your input directory.
+      // ⚠️ These values are relative to your input directory.
       input: "src",
       includes: "_includes",
       data: "_data",

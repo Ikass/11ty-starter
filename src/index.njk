@@ -1,9 +1,13 @@
-{% extends "default.njk" %}
+---
+eleventyNavigation:
+  key: Home
+---
 
-{% block title %}It does work{% endblock %}
+{% extends "default.njk" %}
 
 {% block content %}
   <div class="fixed inset-0 flex items-center justify-center">
+  <h1>{{ title }}</h1>
     <div>
       <span class="text-change">Good design</span><br/>
       <span class="change">is<br/>as little design<br/>as possible</span><br/>
