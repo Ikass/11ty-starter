@@ -1,5 +1,6 @@
 ---
 title: My very first post
+image: /assets/img/eagle.jpg
 ---
 
-some content
+Some content for the first post.
