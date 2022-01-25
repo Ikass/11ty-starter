@@ -14,16 +14,14 @@
   </head>
 
   <body class="flex flex-col min-h-screen">
-  {# header include #}
   {% include 'partials/header.njk' %}
 
-  <main class="flex-1">
-    {% block content %}
+  <main class="container flex-1 mx-auto prose">
+    {% block body %}
       {{ content | safe }}
     {% endblock %}
   </main>
 
-  {# footer include #}
   {% include 'partials/footer.njk' %}
   </body>
 
