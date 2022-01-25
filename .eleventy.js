@@ -30,4 +30,13 @@ module.exports = function (eleventyConfig) {
 
     return content
   })
+  return {
+    dir: {
+      // ⚠️ These values are both relative to your input directory.
+      input: "src",
+      includes: "_includes",
+      data: "_data",
+      output: "_site"
+    }
+  }
 }
