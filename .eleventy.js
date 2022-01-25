@@ -4,32 +4,6 @@ const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const Image = require("@11ty/eleventy-img");
 const path = require('path');
 
-const ImageWidths = {
-  ORIGINAL: null,
-  PLACEHOLDER: 24,
-};
-
-// const imageShortcode = async (
-//   relativeSrc,
-//   alt,
-//   className,
-//   widths = [400, 800, 1280],
-//   baseFormat = 'jpeg',
-//   optimizedFormats = ['webp'],
-//   sizes = '100vw'  
-//   ) => {
-//     const { dir: imgDir } = path.parse(relativeSrc);
-//     const fullSrc = path.join('src', relativeSrc);
-  
-//     const imageMetadata = await Image(fullSrc, {
-//       widths: [ImageWidths.ORIGINAL, ImageWidths.PLACEHOLDER, ...widths],
-//       formats: [...optimizedFormats, baseFormat],
-//       outputDir: path.join('_site/assets/', imgDir),
-//       urlPath: imgDir,
-//     });
-//     return `<picture></picture>`;
-//   };
-
 async function imageShortcode(src, alt) {
   let sizes = "(min-width: 1024px) 100vw, 50vw"
   let srcPrefix = `./src/assets/img/`
@@ -62,13 +36,13 @@ async function imageShortcode(src, alt) {
       return `  <source type="${imageFormat[0].sourceType}" srcset="${imageFormat.map(entry => entry.srcset).join(", ")}" sizes="${sizes}">`
     }).join("\n")}
     <img
-      class="rounded-lg shadow-xl"
-      src="${lowsrc.url}"
-      width="${highsrc.width}"
-      height="${highsrc.height}"
-      alt="${alt}"
-      loading="lazy"
-      decoding="async">
+    src="${lowsrc.url}"
+    width="${highsrc.width}"
+    height="${highsrc.height}"
+    alt="${alt}"
+    class="rounded-lg shadow-xl"
+    loading="lazy"
+    decoding="async">
   </picture>`
 }
 

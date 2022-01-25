@@ -16,7 +16,7 @@
   <body class="flex flex-col min-h-screen">
   {% include 'partials/header.njk' %}
 
-  <main class="container flex-1 mx-auto prose">
+  <main class="flex-1 mx-auto">
     {% block body %}
       {{ content | safe }}
     {% endblock %}
