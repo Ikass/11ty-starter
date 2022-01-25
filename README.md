@@ -34,6 +34,8 @@ npm run start
 
 [Greg Wolanski](https://gregwolanski.com)
 
+[Original template](https://github.com/gregwolanski/eleventy-tailwindcss-alpinejs-starter)
+
 ## Troubleshooting
 
 [Windows](https://github.com/gregwolanski/eleventy-tailwindcss-alpinejs-starter/issues/3)
@@ -43,3 +45,13 @@ npm run start
 MIT
 
 See `LICENSE` for more information.
+
+To-Do:
+
+- [ ] add eleventy image plugin
+- [ ] eleventy navigation plugin
+- [ ] add SEO metatags support
+- [ ] add robots.txt and sitemap.xml generator
+- [ ] add basic layouts/styles
+- [ ] multilingual support
+- [ ] add TailwindCSS typography and forms plugins
