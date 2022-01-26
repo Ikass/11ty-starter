@@ -8,10 +8,10 @@ eleventyNavigation:
   order: 2
 ---
 
-  <div class="py-8">
-    <h1>{{ title }}</h1>
-    <p>{{ description }}</p>
-  </div>
+<div class="py-8 prose lg:prose-xl">
+  <h1>{{ title }}</h1>
+  <p>{{ description }}</p>
+</div>
 
 {%- for post in collections.posts %}
 

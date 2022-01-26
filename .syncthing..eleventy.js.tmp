@@ -57,7 +57,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPassthroughCopy("src/assets/img");
   eleventyConfig.addPassthroughCopy({
-    './node_modules/alpinejs/dist/cdn.js': './assets/js/alpine.js',
+    './node_modules/alpinejs/dist/cdn.js': './js/alpine.js',
   })
 
   eleventyConfig.addShortcode('version', function () {
