@@ -1,0 +1,22 @@
+---
+title: Blog
+description: Latest blog posts
+layout: default
+permalink: /posts/
+eleventyNavigation:
+  key: Posts
+  order: 2
+---
+
+<header class="py-8 prose lg:prose-xl">
+  <h1>{{ title }}</h1>
+  <p>{{ description }}</p>
+</header>
+
+<div class="prose lg:prose-xl prose-a:text-sky-600 prose-a:decoration-yellow-600 hover:prose-a:bg-sky-100">
+{% for post in collections.posts %}
+  <div class="">
+    <a href="{{ post.url }}" class="gap-8 p-2">{{ post.data.title }}</a>
+  </div>
+{% endfor %}
+</div>
