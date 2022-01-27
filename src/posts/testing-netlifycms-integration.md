@@ -3,9 +3,9 @@ layout: post.njk
 tags: blog
 title: Testing NetlifyCMS integration
 date: 2022-01-27T12:56:48.593Z
-thumbnail: https://unsplash.com/photos/uOt-HNhpcKs
+thumbnail: https://images.unsplash.com/photo-1643236294618-d60e33412802
 rating: 3
 ---
 Testing testing.
 
-\[image](https://unsplash.com/photos/uOt-HNhpcKs)
+Updated the Unsplash image link and now it works.
