@@ -2,8 +2,10 @@
 title: Long post
 image: /assets/img/eagle.jpg
 tags: general
+date: 2022-01-27T12:34:46.711Z
+thumbnail: /assets/img/eagle.jpg
+rating: 5
 ---
-
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc gravida faucibus odio, vitae pellentesque turpis. Maecenas interdum lobortis nulla eget condimentum. Donec faucibus lacus augue, non condimentum sem suscipit et. Proin sed arcu metus. Nam eget malesuada quam. Praesent justo nisl, bibendum ac eleifend id, venenatis eu risus. Vivamus rhoncus, magna a elementum fringilla, magna tortor fermentum lectus, vel feugiat diam quam sed justo. Donec nulla urna, consectetur non ligula non, faucibus cursus mi.
 
 Nunc quis odio vitae orci venenatis mattis at at justo. Maecenas venenatis cursus risus, ac lobortis massa finibus et. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In tempor efficitur dui eget suscipit. Mauris pellentesque suscipit scelerisque. Maecenas convallis augue id risus luctus sagittis. Fusce ipsum orci, blandit nec nulla in, facilisis eleifend urna. Curabitur maximus venenatis ex sed ornare. Pellentesque viverra placerat urna a feugiat. Morbi facilisis pellentesque neque ac elementum. Nulla fringilla risus nunc, at pretium neque viverra sed. Donec non aliquam nunc.
@@ -13,6 +15,8 @@ Nam id nisl quis purus rhoncus rhoncus id in lectus. Aenean a vestibulum mi. Don
 {% image "eagle.jpg", "Photo of an eagle" %}
 
 Donec sit amet convallis nulla. Duis elementum, eros vel pulvinar finibus, leo nisl volutpat urna, vitae molestie lacus est ac arcu. Nam nibh turpis, euismod at mattis fermentum, fermentum non diam. Morbi et metus at nisl gravida porttitor et auctor ex. Suspendisse quis enim arcu. Sed rutrum cursus orci sit amet efficitur. Curabitur malesuada, urna a tempus faucibus, nisl tellus ornare lacus, ac molestie ex nulla non dolor.
+
+![Free painting image from Unsplash](https://unsplash.com/photos/BfWDyQ10uMk "Free painting image from Unsplash")
 
 Phasellus odio metus, vehicula sed nibh at, maximus luctus dui. Proin finibus sagittis ipsum vitae aliquam. Mauris quis nunc mattis, consectetur risus id, vehicula turpis. Nunc facilisis orci in ante aliquet, at viverra lacus fermentum. Ut quis elementum lorem. Sed sodales accumsan quam tristique vehicula. Mauris efficitur interdum erat, nec finibus quam lacinia non. Maecenas in eleifend sapien. Etiam cursus facilisis diam, a finibus nulla sodales in. Proin vel auctor odio. Pellentesque sed efficitur dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec nec eleifend dolor.
 
