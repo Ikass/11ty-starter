@@ -1,6 +1,7 @@
 const htmlmin = require('html-minifier');
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
+// Generate responsive images
 const Image = require("@11ty/eleventy-img");
 const path = require('path');
 
@@ -46,9 +47,6 @@ async function imageShortcode(src, alt) {
   </picture>`
 }
 
-
-
-
 const now = String(Date.now())
 
 module.exports = function (eleventyConfig) {
@@ -70,8 +68,6 @@ module.exports = function (eleventyConfig) {
   // === Liquid needed if `markdownTemplateEngine` **isn't** changed from Eleventy default
   eleventyConfig.addJavaScriptFunction("image", imageShortcode)
 
-
-
   //  Minify HTML output
   eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
     if (
@@ -92,7 +88,7 @@ module.exports = function (eleventyConfig) {
 
   return {
     dir: {
-      // ⚠️ These values are relative to your input directory.
+      // These values are relative to your input directory.
       input: "src",
     }
   }
