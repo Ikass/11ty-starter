@@ -3,8 +3,6 @@ title: Long post
 image: /assets/img/eagle.jpg
 tags: general
 date: 2022-01-27T12:34:46.711Z
-thumbnail: /assets/img/eagle.jpg
-rating: 5
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc gravida faucibus odio, vitae pellentesque turpis. Maecenas interdum lobortis nulla eget condimentum. Donec faucibus lacus augue, non condimentum sem suscipit et. Proin sed arcu metus. Nam eget malesuada quam. Praesent justo nisl, bibendum ac eleifend id, venenatis eu risus. Vivamus rhoncus, magna a elementum fringilla, magna tortor fermentum lectus, vel feugiat diam quam sed justo. Donec nulla urna, consectetur non ligula non, faucibus cursus mi.

@@ -3,9 +3,8 @@ tags: thoughts
 title: My second greatest post
 image: /assets/img/eagle.jpg
 date: 2022-01-27T13:00:56.771Z
-thumbnail: /assets/img/eagle.jpg
-rating: 4
 ---
+
 Hello from {{ title }}!
 
 yea yea yea
