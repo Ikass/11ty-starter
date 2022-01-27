@@ -15,7 +15,7 @@ async function imageShortcode(src, alt) {
     throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`)
   }
   let metadata = await Image(src, {
-    widths: [600, 900, 1500],
+    widths: [300, 700, 1400],
     formats: ['webp', 'jpeg'],
     urlPath: "/assets/img/",
     outputDir: "./_site/assets/img/",
