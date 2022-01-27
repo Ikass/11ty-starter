@@ -14,3 +14,24 @@ public_folder: "/assets/img"
 # Run your Eleventy serve commands, (mine is "npm run start")
 # In another terminal window, simultaneously run: "npx netlify-cms-proxy-server" for local backend
 local_backend: true
+
+# Add your collections. Here's an example of multiple collections:
+collections:
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "src/posts" # The path to the folder where the documents are stored  - **
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md - **
+    fields: # The fields for each document, usually in front matter
+      - {
+          label: "Layout",
+          name: "layout",
+          widget: "hidden",
+          default: "post.njk",
+        } # -** can use blog template alias optionally if you set it up previously
+      - { label: "Tags", name: "tags", widget: "hidden", default: "blog" } # - ** - This is optional
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Rating (scale of 1-5)", name: "rating", widget: "number" }
+      - { label: "Body", name: "body", widget: "markdown" }

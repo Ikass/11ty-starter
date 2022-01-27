@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/style.css?v={% version %}"/>
     {% block head %}{% endblock %}
     <script defer src="/js/alpine.js?v={% version %}"></script>
+    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
 
   <body class="flex flex-col min-h-screen">
@@ -23,6 +24,21 @@
   </main>
 
   {% include 'partials/footer.njk' %}
+
+
+<!-- Netlify Identity script -->
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+
   </body>
 
 </html>
