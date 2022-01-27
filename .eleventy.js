@@ -64,9 +64,6 @@ module.exports = function (eleventyConfig) {
 
   // add Image shortcode
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
-  eleventyConfig.addLiquidShortcode("image", imageShortcode)
-  // === Liquid needed if `markdownTemplateEngine` **isn't** changed from Eleventy default
-  eleventyConfig.addJavaScriptFunction("image", imageShortcode)
 
   //  Minify HTML output
   eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
@@ -82,7 +79,6 @@ module.exports = function (eleventyConfig) {
       })
       return minified
     }
-
     return content
   })
 
@@ -90,9 +86,8 @@ module.exports = function (eleventyConfig) {
     dir: {
       // These values are relative to your input directory.
       input: "src",
-    }
-  }
-  return {
-    markdownTemplateEngine: "njk"
+    },
+    markdownTemplateEngine: "njk",
+    templateFormats: ["html", "md", "njk", "yml"]
   }
 }
