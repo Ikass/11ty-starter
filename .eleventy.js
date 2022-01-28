@@ -2,6 +2,7 @@ const htmlmin = require('html-minifier');
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 // Generate responsive images
+// borrowed from here: https://github.com/brycewray/eleventy_solo_starter_njk
 const Image = require("@11ty/eleventy-img");
 const path = require('path');
 
