@@ -11,6 +11,8 @@ Nunc quis odio vitae orci venenatis mattis at at justo. Maecenas venenatis cursu
 
 Nam id nisl quis purus rhoncus rhoncus id in lectus. Aenean a vestibulum mi. Donec sed lorem lobortis, lobortis orci sit amet, vehicula mi. Morbi vel lectus sed ligula cursus maximus in non dui. Vivamus dictum iaculis nisi sed tristique. Nam eget ex nisl. Pellentesque a tellus vehicula lectus viverra posuere id quis felis. Etiam mollis fermentum eros vitae rutrum. Sed pellentesque id orci eget dignissim.
 
+{% image "https://images.unsplash.com/photo-1643236294618-d60e33412802", "Photo of an eagle" %}
+
 {% image "eagle.jpg", "Photo of an eagle" %}
 
 Donec sit amet convallis nulla. Duis elementum, eros vel pulvinar finibus, leo nisl volutpat urna, vitae molestie lacus est ac arcu. Nam nibh turpis, euismod at mattis fermentum, fermentum non diam. Morbi et metus at nisl gravida porttitor et auctor ex. Suspendisse quis enim arcu. Sed rutrum cursus orci sit amet efficitur. Curabitur malesuada, urna a tempus faucibus, nisl tellus ornare lacus, ac molestie ex nulla non dolor.

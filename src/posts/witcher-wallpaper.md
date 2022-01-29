@@ -10,4 +10,6 @@ Testing some more.
 
 Using eleventy-img plugin shortcode:
 
-{% image "witcher3.jpg", "Witcher 3 wallpaper" %}
+## Remote image
+
+{% image "https://images3.alphacoders.com/608/thumb-1920-608887.jpg", "Witcher 3 wallpaper" %}
