@@ -17,6 +17,10 @@
       <figcaption class="text-slate-500">Random image from Unsplash.</figcaption>
     </figure>
 
+    <h2>Testing `eleventy-img` plugin in a Nunjucks template file</h2>
+
+    {% image "{{ image }}", "Image from front matter" %}
+
     <div class="text-slate-800">
       {{ content | safe }}
     </div>
