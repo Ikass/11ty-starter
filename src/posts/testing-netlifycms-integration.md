@@ -12,3 +12,7 @@ Updated the Unsplash image link and now it works. Though it is not processed thr
 ![eagle](/assets/img/eagle.jpg "Photo of an eagle")
 
 This image is from local library.
+
+The below image is from local library, but using the \`eleventy-img\` plugin shortcode:
+
+{% image "eagle.jpg", "Photo of an eagle" %}
