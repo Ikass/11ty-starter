@@ -4,13 +4,14 @@ A starter repository for building a website with the [Eleventy](https://www.11ty
 
 ## To-Do:
 
-- [ ] add eleventy image plugin
+- [x] add eleventy image plugin
 - [x] eleventy navigation plugin
 - [ ] add SEO metatags support
 - [x] add robots.txt and sitemap.xml generator
 - [ ] add basic layouts/styles
 - [ ] multilingual support
 - [x] add TailwindCSS typography and forms plugins
+- [x] add NetlifyCMS
 
 ## Getting Started
 
