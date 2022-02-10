@@ -1,8 +1,13 @@
-<header class="w-full px-6 py-6 bg-slate-100">
-    <nav class="container flex justify-between mx-auto">
-
+<header class="w-full px-6 py-6 bg-slate-100" x-data="{ isOpen: false }" @keydown.escape="isOpen = false"  @click.away="isOpen = false">
+  <nav class="container flex justify-between mx-auto">
+    <!--Logo etc-->
     <h1 class="text-xl font-semibold"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
    
+<!-- 
+Implementation borrowed from: 
+https://github.com/surjithctly/neat-starter 
+-->
+     <!-- Desktop nav -->
     <div class="items-center hidden gap-8 md:flex">
       {%- for entry in collections.all | eleventyNavigation %}
         <a
@@ -11,7 +16,25 @@
       {% endfor %}
     </div>
 
+    <!--Toggle button (hidden on medium screens)-->
+    <button @click="isOpen = !isOpen" type="button" class="block px-2 ml-auto md:hidden text-primary-500 hover:text-primary-500 focus:outline-none focus:text-primary-500" :class="{ 'transition transform-180': isOpen }" aria-label="Menu">
+        <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+            <path x-show="isOpen" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"/>
+            <path x-show="!isOpen" fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
+        </svg>
+    </button>
+  </nav>
 
-
-    </nav>
+  <!-- Mobile nav -->
+  <nav
+    class="container flex flex-col gap-3 mt-8 md:hidden"
+    :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }"
+    x-show.transition="true"
+  >
+    {%- for entry in collections.all | eleventyNavigation %}
+        <a
+        class="{{ 'text-sky-600' if entry.url == page.url }} hover:text-sky-700 text-gray-600"
+        href="{{ entry.url | url }}">{{ entry.title }}</a>
+    {% endfor %}
+  </nav>
 </header>
