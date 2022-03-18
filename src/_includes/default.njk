@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+<!-- Metagen plugin -->
+    {% metagen
+        title=title,
+        desc=description,
+        url="https://11ty-firestarter.netlify.app"+page.url,
+        img=image,
+        img_alt=image_alt,
+        twitter_card_type="summary",
+        twitter_handle="reinis_ikass",
+        name="Reinis Ikass",
+        generator="11ty",
+        dns_prefetch="https://11ty-firestarter.netlify.app/",
+        comments=false
+    %}
+
     <title>{{ title or metadata.title }}</title>
     <meta charset="UTF-8"/>
     {% if description %}

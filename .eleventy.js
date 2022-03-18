@@ -1,5 +1,6 @@
 const htmlmin = require('html-minifier');
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const metagen = require('eleventy-plugin-metagen');
 
 // Generate responsive images
 // borrowed from here: https://github.com/brycewray/eleventy_solo_starter_njk
@@ -90,6 +91,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget('./styles/tailwind.config.js');
   eleventyConfig.addWatchTarget('./styles/tailwind.css');
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.addPlugin(metagen);
   eleventyConfig.addPassthroughCopy("src/assets/img");
   eleventyConfig.addPassthroughCopy({
     './node_modules/alpinejs/dist/cdn.js': './assets/js/alpine.js',

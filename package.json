@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@11ty/eleventy-cache-assets": "^2.3.0",
-    "@tailwindcss/forms": "^0.4.0"
+    "@tailwindcss/forms": "^0.4.0",
+    "eleventy-plugin-metagen": "^1.6.0"
   }
 }

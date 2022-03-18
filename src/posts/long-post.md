@@ -1,6 +1,7 @@
 ---
 title: Long post
 image: /assets/img/eagle.jpg
+image_alt: Flying eagle
 tags: general
 date: 2022-01-27T12:34:46.711Z
 ---

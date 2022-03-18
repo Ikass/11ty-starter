@@ -6,7 +6,7 @@ A starter repository for building a website with the [Eleventy](https://www.11ty
 
 - [x] add eleventy image plugin
 - [x] eleventy navigation plugin
-- [ ] add SEO metatags support
+- [x] add SEO metatags support
 - [x] add robots.txt and sitemap.xml generator
 - [ ] add basic layouts/styles
 - [ ] multilingual support
