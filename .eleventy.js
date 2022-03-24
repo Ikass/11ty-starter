@@ -7,9 +7,9 @@ const metagen = require('eleventy-plugin-metagen');
 const Image = require("@11ty/eleventy-img");
 const path = require('path');
 
-const widths = [300, 700, 1400]
-const formats = ['webp', 'jpeg']
-const sizes = '100vw'
+const widths = [300, 700, 1400];
+const formats = ['webp', 'jpeg'];
+const sizes = '100vw';
 
 const isUrl = (str) => {
   try {
@@ -38,6 +38,7 @@ const isUrl = (str) => {
       sizes,
       loading: 'lazy',
       decoding: 'async',
+      class: 'object-cover',
     })
 
     return `<figure>${markup}<figcaption>${alt}</figcaption></figure>`
@@ -50,7 +51,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget('./styles/tailwind.css');
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(metagen);
-  eleventyConfig.addPassthroughCopy("src/assets/img");
+  eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy({
     './node_modules/alpinejs/dist/cdn.js': './assets/js/alpine.js',
   })

@@ -4,6 +4,7 @@ tags: blog
 title: Testing NetlifyCMS integration
 date: 2022-01-27T12:56:48.593Z
 image: https://images.unsplash.com/photo-1643236294618-d60e33412802
+image_alt: Image from Unsplash
 ---
 Testing testing.
 
@@ -11,7 +12,7 @@ Updated the Unsplash image link and now it works. Though it is not processed thr
 
 ![eagle](/assets/img/eagle.jpg "Photo of an eagle")
 
-This image is from local library.
+This image above is from local library, using Mardown image shortcode.
 
 The below image is from local library, but using the `eleventy-img` plugin shortcode:
 

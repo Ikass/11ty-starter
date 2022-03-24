@@ -1,7 +1,8 @@
 ---
 tags: thoughts
 title: My second greatest post
-image: /assets/img/eagle.jpg
+image: eagle.jpg
+image_alt: Flying eagle with fish in claws
 date: 2022-01-27T13:00:56.771Z
 ---
 

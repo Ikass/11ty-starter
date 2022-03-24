@@ -11,11 +11,8 @@
       <p class="mt-8 text-xl leading-8 text-slate-500">{{ description }}</p>
     </header>
 
-    <!-- image -->
-    <figure>
-      <img class="w-full rounded-lg" src="{{ image }}" alt="">
-      <figcaption class="text-slate-500">Random image from Unsplash.</figcaption>
-    </figure>
+    <!-- image shortcode -->
+    {% image image, image_alt %}
 
     <div class="text-slate-800">
       {{ content | safe }}
