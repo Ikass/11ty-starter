@@ -3,7 +3,6 @@ const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const metagen = require('eleventy-plugin-metagen');
 
 // Generate responsive images
-// borrowed from here: https://github.com/brycewray/eleventy_solo_starter_njk
 const Image = require("@11ty/eleventy-img");
 const path = require('path');
 
@@ -42,6 +41,27 @@ const isUrl = (str) => {
     })
 
     return `<figure>${markup}<figcaption>${alt}</figcaption></figure>`
+  };
+
+  // Generate responsive images for Post covers
+  const imageCoverShortcode = async ( src, alt ) => {
+    if (alt === undefined) throw new Error(`Missing 'alt' on responsive image from: ${src}`)
+    const srcPath = isUrl(src) ? src : path.join('./src/assets/img/', src)
+    const imgDir = isUrl(src) ? '' : path.parse(src).dir
+    const metadata = await Image(srcPath, {
+      widths,
+      formats,
+      outputDir: path.join('_site/assets/img', imgDir),
+      urlPath: '/assets/img' + imgDir,
+    })
+    const markup = Image.generateHTML(metadata, {
+      alt,
+      sizes,
+      loading: 'lazy',
+      decoding: 'async',
+      class: 'object-cover w-full h-48',
+    })
+    return `<figure>${markup}</figure>`
   }
 
 const now = String(Date.now());
@@ -60,8 +80,9 @@ module.exports = function (eleventyConfig) {
     return now
   });
 
-  // add Image shortcode
+  // add Image shortcodes
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
+  eleventyConfig.addNunjucksAsyncShortcode("imageCover", imageCoverShortcode);
 
   //  Minify HTML output
   eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
